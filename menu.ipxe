@@ -3,7 +3,4 @@
 echo ausecus iPXE Menu
 echo MAC address is ${net0/mac:hexhyp}
 prompt Press any key to continue
-echo Booting Demo-Image now...
-kernel vmlinuz-3.16.0-rc4 bootfile=https://boot.ipxe.org:443/demo/boot.php fastboot initrd=initrd.img
-initrd initrd.img
-boot
+chain tftp://192.168.80.250/ausecus-menu.ipxe
